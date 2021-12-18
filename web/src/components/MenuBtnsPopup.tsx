@@ -32,6 +32,10 @@ const MenuBtnsPopup: React.FC<Props> = (props: Props) => {
     locationService.pushHistory("/setting");
   };
 
+  const handleResourceBtnClick = () => {
+    locationService.pushHistory("/resource");
+  };
+
   const handleMemosTrashBtnClick = () => {
     locationService.pushHistory("/recycle");
   };
@@ -49,6 +53,9 @@ const MenuBtnsPopup: React.FC<Props> = (props: Props) => {
     <div className={`menu-btns-popup ${shownStatus ? "" : "hidden"}`} ref={popupElRef}>
       <button className="btn action-btn" onClick={handleMyAccountBtnClick}>
         <span className="icon">👤</span> 账号与设置
+      </button>
+      <button className="btn action-btn" onClick={handleResourceBtnClick}>
+        <span className="icon">📦</span> 资源管理
       </button>
       <button className="btn action-btn" onClick={handleMemosTrashBtnClick}>
         <span className="icon">🗑️</span> 回收站
