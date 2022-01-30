@@ -15,6 +15,8 @@ RUN apk --no-cache add gcc musl-dev
 
 COPY . .
 
+RUN go env -w GOPROXY=https://goproxy.cn,direct
+
 RUN go build \
     -o memos \
     ./server/main.go
