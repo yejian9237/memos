@@ -33,4 +33,4 @@ COPY --from=frontend /frontend-build/dist /usr/local/memos/web/dist
 
 CMD ["./memos"]
 
-EXPOSE 8080
+EXPOSE 8070
